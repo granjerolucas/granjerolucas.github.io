@@ -4,13 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <script>
+    function clicktest() {
+      if (Example != null) {
+        Example.postMessage("Click")
+        window.print();
+      }
+      
+    }
+  </script>
 </head>
 <body>
   
 
-  <button onclick="window.flutter_inappwebview.callHandler('print')">Print2222</button>
+  <button id="btn1" onclick="window.flutter_inappwebview.callHandler('print')">Print2222</button>
 
-   <button onclick="printDiv('printableArea')">Print</button>
+   <button id="btn2" onclick="printDiv('printableArea')">Print</button>
+  <button id="btn3" onclick="clicktest">Print3</button>
   <div class="fl-module-content fl-node-content">
 <div class="fl-rich-text">
 <p>Ecommerce is a quickly growing industry today, which is why many companies have made the move from a traditional setup to their own digital platforms.</p>
