@@ -9,7 +9,7 @@
   
 
 
-
+   <button onclick="printDiv('printableArea')">Print</button>
   <div class="fl-module-content fl-node-content">
 <div class="fl-rich-text">
 <p>Ecommerce is a quickly growing industry today, which is why many companies have made the move from a traditional setup to their own digital platforms.</p>
@@ -260,8 +260,15 @@
 </div>
 
 
-<script>
-  
-</script>
+ <script>
+        function printDiv(divId) {
+            var printContents = document.getElementById(divId).innerHTML;
+            var originalContents = document.body.innerHTML;
+
+            document.body.innerHTML = printContents;
+            window.print();
+            document.body.innerHTML = originalContents;
+        }
+    </script>
 </body>
 </html>
